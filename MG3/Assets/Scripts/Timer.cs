@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     //
     // Make sure to TUNE this value in the INSPECTOR after you create it!
 
-    //private ??? ???;
+    private float Track;
 
     // STEP 1 -----------------------------------------------------------------
 
@@ -23,7 +23,11 @@ public class Timer : MonoBehaviour
     //      should start with.
     // It does not have any output.
     // 
-    //public ??? BeginTimer(??? ???)
+    public void BeginTimer(float timeCountdown)
+    {
+        Track = timeCountdown;
+    }
+
     //{
         // Inside the method here, set the value of our timer member variable to
         // the countdown start time parameter.
@@ -42,23 +46,22 @@ public class Timer : MonoBehaviour
     // The method's name is a built-in one from Unity that runs EVERY FRAME.
     // It has no input or output.
     //
-    //private ??? ???()
-    //{
+    private void TimePast()
+    {
     // Time.deltaTime is a variable provided to us by Unity that represents
     //      how much time has passed since the last frame.
     // In this method body, use Time.deltaTime to decrease the the value of 
     //      our timer member variable every frame.
+    Track -= Time.deltaTime;
 
 
-    //}
+    }
 
     // This method can be used to check the value of your time member variable.
     public float GetTimeLeft()
     {
         // STEP 4 -------------------------------------------------------------
-        // REPLACE this line with a new line of code that reutrns the value of
-        //      your time member variable.
-        return 0;
+        return Track;
         // STEP 4 -------------------------------------------------------------
     }
 
@@ -67,6 +70,16 @@ public class Timer : MonoBehaviour
     //      variable is out of time.
     // Other classes can CALL this method to check if the timer is up.
     // It should be public, and has no input.
+    public bool IsFinished()
+    {
+        if (Track <= 0)
+        {
+            return true;
+        }
+        else { 
+            return false;
+        }
+    }
     
 
 
