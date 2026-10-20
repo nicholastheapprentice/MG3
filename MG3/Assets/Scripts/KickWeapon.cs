@@ -17,7 +17,7 @@ public class KickWeapon : MonoBehaviour
         //      to the method in order to start our timer with the number
         //      of seconds that _lifetimeSeconds is set to.
 
-        //_lifeTimer.BeginTimer(_lifetimeSeconds);
+        _lifeTimer.BeginTimer(_lifetimeSeconds);
 
         // STEP 6 -------------------------------------------------------------
     }
@@ -28,7 +28,7 @@ public class KickWeapon : MonoBehaviour
     // Uncomment the below method and replace the ???s with the method name.
     // This is a built-in method from Unity that runs EVERY FRAME.
     //
-    //private void ???()
+    private void ???()
     //{
         
         // In the body of this method, we want to check if the timer has run out,
