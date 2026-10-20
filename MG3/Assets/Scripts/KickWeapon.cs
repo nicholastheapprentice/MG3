@@ -28,18 +28,18 @@ public class KickWeapon : MonoBehaviour
     // Uncomment the below method and replace the ???s with the method name.
     // This is a built-in method from Unity that runs EVERY FRAME.
     //
-    private void ???()
-    //{
+    private void update()
+    {
         
         // In the body of this method, we want to check if the timer has run out,
         //      and disable the KickWeapon when it's done.
         // Simply uncomment the lines once you've written the method.
 
-        //if (_lifeTimer.IsFinished())
-        //{
-        //     gameObject.SetActive(false);
-        //}
+        if (_lifeTimer.IsFinished())
+        {
+             gameObject.SetActive(false);
+        }
 
-    //}
+    }
     // STEP 7 -----------------------------------------------------------------
 }
