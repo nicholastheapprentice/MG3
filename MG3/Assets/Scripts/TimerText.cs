@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 
+
 public class TimerText : MonoBehaviour
 {
     [SerializeField] private GameObject _gameOverText;
@@ -13,11 +14,13 @@ public class TimerText : MonoBehaviour
     // This method runs ONCE, when the GAME BEGINS. It is called by Unity.
     // Uncomment this method and fill in the method name.
     //
-    private void onlyRunOnce()
+    private void Start ()
     {
         // Inside this method, CALL the BeginTimer method on _gameTimer.
         // Pass in _maxGameTime as the ARGUMENT.
         _gameTimer.BeginTimer(_maxGameTime);
+        Debug.Log(_maxGameTime);
+       
     }
     // STEP 8 -----------------------------------------------------------------
 
@@ -34,14 +37,17 @@ public class TimerText : MonoBehaviour
         // Write your if statement below.
 
         // STEP 9 -------------------------------------------------------------
-        if (_gameTimer.GetTimeLeft() <= 0)
+        if (_gameTimer.IsFinished())
         {
-            GameOver();
+           GameOver();
         }
         else
         {
+            
             _timerDisplay.text = _gameTimer.GetTimeLeft().ToString();
+
         }
+        Debug.Log(_gameTimer.GetTimeLeft());
     }
     
     // ------------------------------------------------------------------------

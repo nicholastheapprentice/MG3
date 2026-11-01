@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
         // Inside the method here, set the value of our timer member variable to
         // the countdown start time parameter.
         timeLeft = timeCountdownBegin;
-        Debug.Log(timeCountdownBegin);
+        //Debug.Log(timeCountdownBegin);
         //这里有问题，debug不出来
     }
 
@@ -76,8 +76,10 @@ public class Timer : MonoBehaviour
         {
             return true;
         }
-        else { 
+        else {
+            countTime();
             return false;
+            
         }
     }
 
