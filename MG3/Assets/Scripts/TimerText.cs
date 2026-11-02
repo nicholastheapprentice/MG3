@@ -9,6 +9,10 @@ public class TimerText : MonoBehaviour
     [SerializeField] private float _maxGameTime = 30.0f;
     [SerializeField] private TMP_Text _timerDisplay;
     [SerializeField] private Timer _gameTimer;
+    private float deci;
+    private int integer;
+    private bool buer;
+    private string text;
 
     // STEP 8 -----------------------------------------------------------------
     // This method runs ONCE, when the GAME BEGINS. It is called by Unity.
@@ -20,7 +24,12 @@ public class TimerText : MonoBehaviour
         // Pass in _maxGameTime as the ARGUMENT.
         _gameTimer.BeginTimer(_maxGameTime);
         Debug.Log(_maxGameTime);
-       
+
+        Debug.Log(deci);
+        Debug.Log(integer);
+        Debug.Log(buer);
+        Debug.Log(text);
+
     }
     // STEP 8 -----------------------------------------------------------------
 

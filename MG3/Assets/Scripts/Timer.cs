@@ -29,7 +29,6 @@ public class Timer : MonoBehaviour
         // the countdown start time parameter.
         timeLeft = timeCountdownBegin;
         //Debug.Log(timeCountdownBegin);
-        //这里有问题，debug不出来
     }
 
     // STEP 2 -----------------------------------------------------------------
